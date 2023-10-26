@@ -1,0 +1,278 @@
+@import url("https://fonts.googleapis.com/css2?family=Urbanist&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@700&family=Roboto:wght@900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Londrina+Shadow&display=swap");
+
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+*::selection {
+  background-color: rgb(253, 215, 0);
+}
+
+body {
+  background: url(../img/background-kultura.jpg) no-repeat center fixed;
+  background-size: cover;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+.cap-opacity {
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgba(15, 15, 231, 0.363);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container {
+  width: 100%;
+  height: auto;
+  padding: 0 2em;
+}
+
+header {
+  width: 100%;
+  height: 12vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  border-bottom: 1px solid rgb(161, 160, 160);
+}
+
+header > a {
+  display: block;
+  font-size: 1em;
+  color: #fff;
+  font-weight: 600;
+  flex: 0 0 20%;
+  text-decoration: none;
+}
+
+header .navbar {
+  flex: 2 0 20%;
+  height: 100%;
+}
+
+header .navbar > ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  height: 100%;
+}
+
+.navbar ul > li {
+  width: 15%;
+  height: 100%;
+}
+
+header .navbar ul > li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: #fff;
+  font-size: 1.1em;
+  font-weight: 500;
+  font-family: "Urbanist", sans-serif;
+  text-decoration: none;
+}
+
+header .navbar > ul > li a:hover {
+  border-bottom: 1px solid rgb(253, 215, 0);
+  color: rgb(253, 215, 0);
+}
+
+.navbar > ul > li a > i {
+  margin-left: 0.2em;
+}
+
+/* SUBMENU EXPLORE */
+
+.navbar > ul li:first-of-type {
+  position: relative;
+  display: inline-block;
+}
+
+.explore-nav {
+  visibility: hidden;
+  opacity: 0;
+  list-style: none;
+  position: absolute;
+  width: 120%;
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(65, 105, 225, 0.562);
+  transition: all 0.5s;
+}
+
+.navbar > ul li:first-of-type:hover > .explore-nav {
+  visibility: visible;
+  opacity: 100;
+}
+
+.navbar > ul li:first-of-type:hover > a > i.fa-angle-right {
+  transform: rotate(90deg);
+  transition: all 0.3s;
+}
+
+.navbar > ul li:first-of-type > .explore-nav li {
+  width: 100%;
+}
+
+.navbar > ul li:first-of-type .explore-nav li a:hover {
+  border: none;
+  background-color: rgb(65, 105, 225);
+}
+
+.navbar > ul li:first-of-type .explore-nav li a {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.navbar > ul li:first-of-type .explore-nav li a > i {
+  margin-right: 0.5em;
+}
+
+header .search,
+.profile {
+  font-size: 1.5em;
+  color: #fff;
+}
+
+header .search {
+  margin-right: 1em;
+  height: 40%;
+  padding: 0 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .search a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header .search > input {
+  width: 0;
+  height: 100%;
+  border: none;
+  font-family: "Urbanist", sans-serif;
+  font-size: 0.7em;
+  font-weight: bolder;
+  color: rgb(161, 160, 160);
+}
+
+header .search > input::placeholder {
+  font-family: "Urbanist", sans-serif;
+  font-weight: bolder;
+  color: rgb(161, 160, 160);
+}
+
+header .search > input:focus {
+  outline: none;
+}
+
+header .search:hover {
+  background-color: white;
+}
+
+header .search:hover > a {
+  color: rgb(161, 160, 160);
+  font-size: 1em;
+}
+
+header .search:hover > input {
+  width: 90%;
+  padding: 0 10px;
+}
+
+/* Footer */
+.footer {
+  width: 100%;
+  height: auto;
+  padding: 5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(15, 15, 231, 0.808);
+  align-self: flex-end;
+}
+
+.footer > p {
+  font-size: 2.5em;
+  font-family: "Urbanist", sans-serif;
+  font-weight: bolder;
+  margin-bottom: 1em;
+  color: #fff;
+  text-align: center;
+}
+
+.footer .social-media {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-media > a {
+  text-decoration: none;
+  font-weight: bolder;
+  font-size: 2em;
+  margin-right: 1em;
+  color: #fff;
+}
+
+.social-media > a:hover {
+  transition: all 0.5s;
+  font-size: 2.5em;
+  color: rgb(253, 215, 0);
+}
+
+@media (max-width: 900px) {
+  /* SECTION NAVBAR */
+  header {
+    width: 100%;
+    height: auto;
+    flex-flow: row wrap;
+    position: relative;
+  }
+
+  header .navbar {
+    flex: 0 0 100%;
+    height: 10vh;
+    order: 1;
+  }
+
+  .navbar > ul li {
+    flex: 1 0 5%;
+  }
+
+  header .search {
+    flex: 2 0 5%;
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 10px;
+  }
+
+  header .profile {
+    flex: 0 0 5%;
+  }
+
+  /* SECTION FOOTER */
+  .footer {
+    padding: 3em;
+  }
+}

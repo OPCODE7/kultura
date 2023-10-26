@@ -1,0 +1,268 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.content-about {
+  width: 100%;
+  height: auto;
+  margin-top: 5vh;
+}
+
+/* SECTION ABOUT US */
+.content-about .about-us {
+  width: 100%;
+  height: 83vh;
+  display: flex;
+}
+
+.content-about .about-us .info-about {
+  flex: 1 0 25%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.952);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 1.5em;
+}
+
+.info-about > h2,
+p,
+a {
+  color: #283d7e;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+.info-about > h2 {
+  font-size: 4em;
+}
+
+.info-about > h2 > span {
+  color: #7a8bff;
+}
+
+.info-about > a {
+  text-decoration: none;
+  background-color: #283d7e;
+  font-size: 1.2em;
+  padding: 10px;
+  width: auto;
+  margin-top: 5%;
+  border-radius: 5px;
+  color: #fff;
+  text-align: center;
+  align-self: flex-start;
+}
+
+.info-about > a:hover {
+  background-color: #7a8bff;
+}
+
+.content-about .about-us .image-about {
+  flex: 2 0 25%;
+  height: 100%;
+}
+
+.image-about > img {
+  width: 100%;
+  height: 100%;
+}
+
+/* SECTION CONTACT */
+.content-about .contact {
+  width: 100%;
+  height: 55vh;
+  display: flex;
+  background-color: #7a8bff;
+  position: relative;
+}
+
+.content-about .contact .get-in-touch {
+  width: 50%;
+  height: 100%;
+  padding: 0 4em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.get-in-touch > h3 {
+  color: #fff;
+  font-size: 2.5em;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+.get-in-touch > p {
+  margin: 10px 0;
+  color: #283d7e;
+  font-size: 1em;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+.get-in-touch > .contact-media {
+  margin-top: 5%;
+}
+
+.get-in-touch > .contact-media > p {
+  margin-top: 5%;
+}
+
+.contact-media > p > i {
+  margin-right: 1.5em;
+}
+
+.contact .form {
+  width: 30%;
+  height: 110%;
+  background-color: #fff;
+  padding: 2em;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.623);
+}
+
+.form > form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.form > form > * {
+  margin-bottom: 10px;
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+  border-radius: 3px;
+}
+
+.form > form label {
+  font-size: 2em;
+  color: #283d7e;
+}
+
+.form > form > input,
+textarea {
+  outline: none;
+  border: 2px solid #283d7e;
+  padding: 10px;
+}
+
+.form > form > button {
+  padding: 10px 0;
+  background-color: #283d7e;
+  color: #fff;
+  border: none;
+}
+
+/* RESIZE FOOTER */
+
+.footer {
+  padding: 5.5em 0;
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  /* SECTION ABOUT US */
+  .content-about .about-us .info-about {
+    padding: 0 1em;
+  }
+
+  .info-about > a {
+    margin-top: 10%;
+  }
+
+  .content-about .about-us .image-about {
+    flex: 1 0 25%;
+  }
+
+  /* SECTION CONTACT */
+  .content-about .contact .get-in-touch {
+    padding: 0 3em;
+  }
+
+  .contact .form {
+    width: 45%;
+    height: 110%;
+  }
+}
+
+@media (max-width: 767px) {
+  /* SECTION INFOABOUT-US */
+  .content-about {
+    height: auto;
+  }
+
+  .content-about .about-us {
+    flex-direction: column;
+    height: 1200px;
+  }
+
+  .content-about .about-us .info-about {
+    width: 100%;
+    flex: 0 0 40%;
+    padding: 2em;
+    order: 1;
+  }
+
+  .content-about .about-us .image-about {
+    width: 100%;
+    flex: 1 0 25%;
+  }
+
+  /* SECTION CONTACT */
+  .content-about .contact {
+    height: 1000px;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+  }
+
+  .content-about .contact .get-in-touch {
+    width: 100%;
+    height: 50%;
+    padding: 2em;
+  }
+
+  .get-in-touch > h3 {
+    font-size: 3.5em;
+  }
+
+  .get-in-touch > .contact-media {
+    margin-top: 4%;
+  }
+
+  .contact .form {
+    width: 70%;
+    height: 50%;
+    position: initial;
+  }
+
+  .info-about,
+  .image-about,
+  .contact {
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .content-about .about-us {
+    height: 900px;
+  }
+
+  .content-about .about-us > .image-about {
+    flex: 0.5 0 25%;
+  }
+
+  .content-about .about-us > .info-about {
+    flex: 1 0 25%;
+  }
+
+  .get-in-touch > h3 {
+    font-size: 2.5em;
+  }
+
+  .contact .form {
+    width: 100%;
+  }
+}

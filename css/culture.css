@@ -1,0 +1,113 @@
+.content-culture {
+  width: 100%;
+  height: auto;
+  padding: 2em 9em;
+}
+
+.content-culture .card-culture {
+  width: 100%;
+  height: 700px;
+  background-color: lavenderblush;
+  border-radius: 2px;
+  padding: 1em 2em;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10vh;
+}
+
+.content-culture .card-culture > h3 {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 3em;
+  color: #283d7e;
+  flex: 0 0 10%;
+  text-align: center;
+}
+
+.content-culture .card-culture .images {
+  width: 100%;
+  flex: 2 0 20%;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 5vh 0;
+  padding: 2em 0;
+}
+
+.content-culture .card-culture .images > img {
+  width: 30%;
+  height: 100%;
+}
+
+.content-culture .card-culture .images :nth-child(1) {
+  transform: rotate(-5deg);
+}
+
+.content-culture .card-culture .images :nth-child(3) {
+  transform: rotate(5deg);
+}
+
+.content-culture .card-culture .info-section {
+  flex: 1 0 20%;
+  padding: 2em 1em;
+  background-color: #7a8bff;
+  border-radius: 10px;
+  border: 1px solid #283d7e;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.info-section > p {
+  font-size: 1.1em;
+  font-family: "IBM Plex Sans", sans-serif;
+  color: #fff;
+}
+
+.info-section > a {
+  font-size: 1.1em;
+  font-family: "IBM Plex Sans", sans-serif;
+  background-color: #283d7e;
+  color: #fff;
+  width: 6em;
+  padding: 10px 0;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 2vh;
+}
+
+@media (max-width: 900px) {
+  .content-culture {
+    padding: 1em 2em;
+  }
+}
+
+@media (max-width: 480px) {
+  .content-culture .card-culture {
+    height: auto;
+  }
+
+  
+.content-culture .card-culture > h3 {
+    flex: 0 0 5%;
+  }
+
+  .content-culture .card-culture .images {
+    flex-direction: column;
+  }
+
+  .content-culture .card-culture .images > img {
+    width: 100%;
+  }
+
+  .content-culture .card-culture .images :nth-child(1) {
+    transform: rotate(0);
+  }
+
+  .content-culture .card-culture .images :nth-child(2) {
+    margin: 10px 0;
+  }
+
+  .content-culture .card-culture .images :nth-child(3) {
+    transform: rotate(0);
+  }
+}

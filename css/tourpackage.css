@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@700&family=Roboto:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Shadow&display=swap');
+
+.tourist-packages{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    margin: 10vh 0;
+}
+
+/* SECTION ROATAN */
+
+.tourist-packages .destine{
+    width: 100%; 
+    margin-bottom: 10vh;
+    padding: 1em 2em;
+    
+}
+
+.tourist-packages .roatan{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 5% repeat(2,1fr);
+    height: 1100px;
+    gap: 2vh;
+}
+
+
+
+.tourist-packages .destine > h2{
+    grid-column: 1/4;
+    grid-row: 1/2;
+    font-family: 'IBM Plex Sans',sans-serif;
+    color: #fff;
+    font-size: 2em;
+    letter-spacing: 1px;
+}
+
+
+ .card-package{
+    background-color: rgba(4, 0, 255, 0.562);
+    display: flex;
+    flex-direction: column;
+
+}
+
+.tourist-packages .destine .card-package .img-card,.description-card{
+    height: 50%;
+    position: relative;
+    overflow: hidden;
+}
+
+.img-card:hover > img{
+    transform: scale(1.2);
+    transition: all 1s;
+}
+
+.card-package .img-card > img{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.destine .card-package > .img-card::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #000;
+    position: absolute;
+    opacity: 0.3;
+}
+
+.card-package .img-card > .tittle-card{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    color: #fff;
+}
+
+.tittle-card :nth-child(2),h2{
+    color: #fff;
+    font-family: 'Roboto',sans-serif;
+    font-weight: 400;
+    font-size: 1.5em;
+}
+
+.card-package .description-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5em 0;
+}
+
+.card-package .description-card > h3{
+    font-size: 1.6em;
+    font-family: 'IBM Plex Sans',sans-serif;
+    font-weight: 500;
+    color: gold;
+}
+
+.card-package .description-card > p{
+    font-size: 1em;
+    color: #fff;
+    text-align: center;
+}
+
+.card-package .description-card > a{
+    position: absolute;
+    bottom: 10%;
+    background-color: rgb(212, 184, 26);
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 1em;
+    border-radius: 30px;
+}
+
+.card-package .description-card > a:hover{
+    background-color: rgb(255, 217, 5);
+}
+
+
+/* SECTION TELA & COPAN & SPS & UTILA*/
+.tourist-packages .tela,.copan,.sps,.utila{
+    display: grid;
+    grid-template: 5% 1fr/ repeat(3,1fr);
+    gap: 2vh;
+    height: 550px;
+}
+
+@media (max-width: 900px){
+    /* SECTION ROATAN */
+    .tourist-packages .roatan{
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: 5% repeat(3,1fr);
+        height: 1200px;
+    }    
+
+    .tourist-packages .destine > h2{
+        grid-column: 1/3;
+        grid-row: 1/2;
+    }
+
+/* SECTION TELA & COPAN & SPS & UTILA*/
+.tourist-packages .tela,.copan,.utila{
+    display: grid;
+    grid-template: 5% repeat(2,1fr)/ repeat(2,1fr);
+    gap: 2vh;
+    height: 700px;
+}
+
+.tourist-packages .sps{
+    grid-template: 5% 1fr/ repeat(2,1fr);
+    height: auto;
+    row-gap: 5vh;
+}
+
+}
+
+
+/* MEDIA 600PX */
+@media (max-width: 600px){
+    .tourist-packages .roatan{
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: auto;
+        height: auto;
+    }    
+
+    .tourist-packages .tela,.copan,.utila{
+        grid-template: auto/ repeat(1,1fr);
+        height: auto;
+    }
+
+    .tourist-packages .sps{
+        grid-template: auto/ repeat(1,1fr);
+    }
+
+    .tourist-packages .destine > h2{
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+
+
+}
